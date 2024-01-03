@@ -7,7 +7,6 @@
 void _push(stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
-	int value;
 
 	stack_t *new_node;
 

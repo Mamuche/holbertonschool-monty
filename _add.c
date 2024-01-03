@@ -9,7 +9,7 @@
 
 void _add(stack_t **stack, unsigned int line_number)
 {
-	stack_t *tmp = NULL;
+	/*stack_t *tmp = NULL;*/
 	int sum = 0;
 
 	if (!*stack || !(*stack)->next)
@@ -18,9 +18,10 @@ void _add(stack_t **stack, unsigned int line_number)
 		free(stack);
 		exit(EXIT_FAILURE);
 	}
-
-	tmp = *stack;
+	sum = (*stack)->n + (*stack)->next->n;
+	/*tmp = *stack;
 	sum = tmp->next + tmp->next->n;
-	tmp->next->n = sum;
+	tmp->next->n = sum;*/
 	_pop(stack, line_number);
+	(*stack)->n = sum;
 }

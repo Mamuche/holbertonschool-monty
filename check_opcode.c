@@ -21,11 +21,11 @@ void check_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 		{"NULL", NULL},
 	};
 
-	while (functions[i]->opcode != NULL)
+	while (functions[i].opcode != NULL)
 	{
-		if (strcmp(opcode, functions[i]->opcode) == 0)
+		if (strcmp(opcode, functions[i].opcode) == 0)
 		{
-			functions[i]->f(stack, line_number);
+			functions[i].f(stack, line_number);
 			return;
 		}
 		i++;

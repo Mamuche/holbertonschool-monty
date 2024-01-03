@@ -1,5 +1,5 @@
 #include "monty.h"
-
+char *value = NULL;
 /**
 * main - main function
 * @argc: argument count
@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	char *line = NULL, *opcode = NULL, *value = NULL;
+	char *line = NULL, *opcode = NULL;
 
 	size_t len = 0;
 	unsigned int count_line = 0, line_number = 1;
