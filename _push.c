@@ -6,8 +6,7 @@
 */
 void _push(stack_t **stack, unsigned int line_number)
 {
-	/*get value associated (push <int>)*/
-    /*using strtok*/
+	(void)line_number;
 	int value;
 
 	stack_t *new_node;
@@ -16,11 +15,13 @@ void _push(stack_t **stack, unsigned int line_number)
 
 	if (new_node == NULL)
 	{
+		free(new_node);
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
+
 	new_node->prev = NULL;
-	new_node->n = value;
+	new_node->n = atoi(value);
 	new_node->next = *stack;
 
 	*stack = new_node;

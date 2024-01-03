@@ -14,7 +14,7 @@ void _pint(stack_t **stack, unsigned int line_number)
 		fprintf(stdout, "%d\n", node->n);
 	else
 	{
-		fprintf(stderr, "L<line_number>: can't pint, stack empty", line_number);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
