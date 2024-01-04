@@ -38,11 +38,6 @@ int main(int argc, char *argv[])
 		if (strcmp(opcode, "push") == 0)
 		{
 			value = strtok(NULL, " \t\n");
-			if (value !=NULL && *value != '\0')
-			{
-				free(value);
-				value = NULL;
-			}
 		}
 		co(opcode, &stack, count_line, value);
 		count_line++;

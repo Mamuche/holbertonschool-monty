@@ -41,7 +41,7 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 
 	while (value[i])
 	{
-		if (value[i] == '-')
+		if (value[i] == ' ')
 		{
 			i++;
 			continue;
