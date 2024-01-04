@@ -4,10 +4,12 @@
  * _swap - swaps the top two elements of the stack.
  * @stack: the stack
  * @line_number: line number
+ * @value: value
 */
 
-void _swap(stack_t **stack, unsigned int line_number)
+void _swap(stack_t **stack, unsigned int line_number, char *value)
 {
+	(void)value;
 	stack_t *current = *stack;
 	int temp = 0;
 

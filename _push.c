@@ -3,8 +3,9 @@
 * _push - pushes an element to the stack
 * @stack: the stack
 * @line_number: line number
+* @value: value
 */
-void _push(stack_t **stack, unsigned int line_number)
+void _push(stack_t **stack, unsigned int line_number, char *value)
 {
 	(void)line_number;
 

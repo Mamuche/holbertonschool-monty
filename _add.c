@@ -5,11 +5,12 @@
  * _add - adds the top two elements of the stack.
  * @stack: the stack
  * @line_number: line number
+ * @value: value
 */
 
-void _add(stack_t **stack, unsigned int line_number)
+void _add(stack_t **stack, unsigned int line_number, char *value)
 {
-	/*stack_t *tmp = NULL;*/
+	/*(void)value;*/
 	int sum = 0;
 
 	if (!*stack || !(*stack)->next)
@@ -19,9 +20,6 @@ void _add(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	sum = (*stack)->n + (*stack)->next->n;
-	/*tmp = *stack;
-	sum = tmp->next + tmp->next->n;
-	tmp->next->n = sum;*/
-	_pop(stack, line_number);
+	_pop(stack, line_number, value);
 	(*stack)->n = sum;
 }

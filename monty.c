@@ -1,5 +1,4 @@
 #include "monty.h"
-char *value = NULL;
 /**
 * main - main function
 * @argc: argument count
@@ -10,7 +9,7 @@ char *value = NULL;
 int main(int argc, char *argv[])
 {
 	FILE *file;
-	char *line = NULL, *opcode = NULL;
+	char *line = NULL, *opcode = NULL, *value = NULL;
 
 	size_t len = 0;
 	unsigned int count_line = 0, line_number = 1;
@@ -36,7 +35,7 @@ int main(int argc, char *argv[])
 			value = strtok(NULL, " \t\n");
 
 		}
-		check_opcode(opcode, &stack, line_number);
+		co(opcode, &stack, line_number, value);
 		count_line++;
 	}
 	free(line);

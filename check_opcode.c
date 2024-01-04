@@ -1,12 +1,13 @@
 #include "monty.h"
 
 /**
-* check_opcode - checks opcodes
+* co - checks opcodes
 * @opcode: the opcode to check
 * @stack: stack to check in
 * @line_number: line number
+* @value: value
 */
-void check_opcode(char *opcode, stack_t **stack, unsigned int line_number)
+void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 {
 	int i = 0;
 
@@ -25,7 +26,7 @@ void check_opcode(char *opcode, stack_t **stack, unsigned int line_number)
 	{
 		if (strcmp(opcode, functions[i].opcode) == 0)
 		{
-			functions[i].f(stack, line_number);
+			functions[i].f(stack, line_number, value);
 			return;
 		}
 		i++;

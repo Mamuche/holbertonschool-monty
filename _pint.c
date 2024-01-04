@@ -5,9 +5,11 @@
 * followed by a new line
 * @stack: the stack
 * @line_number: line number
+* @value: value
 */
-void _pint(stack_t **stack, unsigned int line_number)
+void _pint(stack_t **stack, unsigned int line_number, char *value)
 {
+	(void)value;
 	stack_t *node = *stack;
 
 	if (*stack != NULL)

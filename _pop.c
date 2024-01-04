@@ -5,10 +5,12 @@
  * _pop - removes the top element of the stack.
  * @stack: the stack
  * @line_number: line number
+ * @value: value
  */
 
-void _pop(stack_t **stack, unsigned int line_number)
+void _pop(stack_t **stack, unsigned int line_number, char *value)
 {
+	(void)value;
 	stack_t *node;
 
 	if (stack == NULL)

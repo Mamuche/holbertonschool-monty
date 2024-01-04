@@ -34,21 +34,19 @@ typedef struct instruction_s
 {
 	char *opcode;
 
-	void (*f)(stack_t **stack, unsigned int line_number);
+	void (*f)(stack_t **stack, unsigned int line_number, char *value);
 
 } instruction_t;
 
-extern char *value;
+void _pall(stack_t **stack, unsigned int line_number, char *value);
+void _pop(stack_t **stack, unsigned int line_number, char *value);
+void _swap(stack_t **stack, unsigned int line_number, char *value);
+void _add(stack_t **stack, unsigned int line_number, char *value);
+void _pint(stack_t **stack, unsigned int line_number, char *value);
+void _push(stack_t **stack, unsigned int line_number, char *value);
+void _nop(stack_t **stack, unsigned int line_number, char *value);
 
-void _pall(stack_t **stack, unsigned int line_number);
-void _pop(stack_t **stack, unsigned int line_number);
-void _swap(stack_t **stack, unsigned int line_number);
-void _add(stack_t **stack, unsigned int line_number);
-void _pint(stack_t **stack, unsigned int line_number);
-void _push(stack_t **stack, unsigned int line_number);
-void _nop(stack_t **stack, unsigned int line_number);
-
-void check_opcode(char *opcode, stack_t **stack, unsigned int line_number);
+void co(char *opcode, stack_t **stack, unsigned int line_number, char *value);
 void free_stack(stack_t *stack);
 
 #endif
