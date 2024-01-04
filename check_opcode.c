@@ -31,6 +31,6 @@ void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 		}
 		i++;
 	}
-	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
+	dprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
 	exit(EXIT_FAILURE);
 }
