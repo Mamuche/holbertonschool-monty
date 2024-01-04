@@ -13,10 +13,10 @@ void _pint(stack_t **stack, unsigned int line_number, char *value)
 	stack_t *node = *stack;
 
 	if (*stack != NULL)
-		fprintf(stdout, "%d\n", node->n);
+		dprintf(1, "%d\n", node->n);
 	else
 	{
-		dprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		dprintf(2, "L%u: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
