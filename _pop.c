@@ -15,7 +15,7 @@ void _pop(stack_t **stack, unsigned int line_number, char *value)
 
 	if (stack == NULL)
 	{
-		dprintf(2, "L%u: can't pop an empty stack\n", line_number);
+		fprintf(2, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
