@@ -29,6 +29,11 @@ int main(int argc, char *argv[])
 	}
 	while (getline(&line, &len, file) != -1)
 	{
+		if (line[0] == '\n')
+		{
+			count_line++;
+			continue;
+		}
 		opcode = strtok(line, " \t\n");
 		if (strcmp(opcode, "push") == 0)
 		{
