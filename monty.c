@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	char *line = NULL, *opcode = NULL, *value = NULL;
 
 	size_t len = 0;
-	unsigned int count_line = 0, line_number = 1;
+	unsigned int count_line = 1;
 	stack_t *stack = NULL;
 
 	if (argc != 2)
@@ -33,9 +33,8 @@ int main(int argc, char *argv[])
 		if (strcmp(opcode, "push") == 0)
 		{
 			value = strtok(NULL, " \t\n");
-
 		}
-		co(opcode, &stack, line_number, value);
+		co(opcode, &stack, count_line, value);
 		count_line++;
 	}
 	free(line);

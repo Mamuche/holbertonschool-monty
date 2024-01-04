@@ -19,10 +19,10 @@ void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
-		{"NULL", NULL},
+		{NULL, NULL},
 	};
 
-	while (functions[i].opcode != NULL)
+	while (functions[i].opcode)
 	{
 		if (strcmp(opcode, functions[i].opcode) == 0)
 		{
