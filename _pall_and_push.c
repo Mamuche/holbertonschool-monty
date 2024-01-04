@@ -46,6 +46,11 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
+	if (atoi(value) == 0)
+	{
+		dprintf(2, "L%u: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
 	new_node->prev = NULL;
 	new_node->n = atoi(value);
