@@ -41,6 +41,11 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 
 	while (value[i])
 	{
+		if (value[i] == ' ')
+		{
+			i++;
+			continue;
+		}
 		if (value[i] < '0' || value[i] > '9')
 		{
 			dprintf(2, "L%u: usage: push integer\n", line_number);
