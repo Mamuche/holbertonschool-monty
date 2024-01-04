@@ -1,4 +1,4 @@
-push 1
-push        2
-push
-push
+push 5.7
+pall
+push 9.2
+pall
