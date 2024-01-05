@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *line = NULL, *opcode = NULL, *value = NULL;
-
 	size_t len = 0;
 	unsigned int count_line = 1;
 	stack_t *stack = NULL;
@@ -21,7 +20,6 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-
 	if (file == NULL)
 	{
 		dprintf(2, "Error: Can't open file %s\n", argv[1]);
@@ -42,9 +40,7 @@ int main(int argc, char *argv[])
 			continue;
 		}
 		if (strcmp(opcode, "push") == 0)
-		{
 			value = strtok(NULL, " \t\n");
-		}
 		co(opcode, &stack, count_line, value);
 		count_line++;
 	}
