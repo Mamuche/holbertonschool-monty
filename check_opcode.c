@@ -25,6 +25,7 @@ void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 		{"mod", _mod},
 		{"pchar", _pchar},
 		{"pstr", _pstr},
+		{"rotl", _rotl},
 		{NULL, NULL},
 	};
 
