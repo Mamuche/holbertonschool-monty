@@ -29,17 +29,17 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 ## **Examples**
 
-Add command :
-![Add code example](add.png)
-Nop command :
-![Nop code example](nop.m.png)
-Push and pall command :
-![Push and pall code example](push_and_pall.png)
-Pint command :
-![Pint code example](pint.png)
-Pop command :
-![Pop code example](pop.png)
-Swap command :
+Add command :  
+![Add code example](add.png)  
+Nop command :  
+![Nop code example](nop.m.png)  
+Push and pall command :  
+![Push and pall code example](push_and_pall.png)  
+Pint command :  
+![Pint code example](pint.png)  
+Pop command :  
+![Pop code example](pop.png)  
+Swap command :  
 ![Swap code example](swap.png)
 
 ## **Authors**
