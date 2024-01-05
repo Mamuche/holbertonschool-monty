@@ -22,5 +22,4 @@ void _pchar(stack_t **stack, unsigned int line_number, char *value)
 		exit(EXIT_FAILURE);
 	}
 	dprintf(1, "%c\n", node->n);
-
 }

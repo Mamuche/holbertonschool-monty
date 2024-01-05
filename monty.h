@@ -50,6 +50,7 @@ void _div(stack_t **stack, unsigned int line_number, char *value);
 void _mul(stack_t **stack, unsigned int line_number, char *value);
 void _mod(stack_t **stack, unsigned int line_number, char *value);
 void _pchar(stack_t **stack, unsigned int line_number, char *value);
+void _pstr(stack_t **stack, unsigned int line_number, char *value);
 
 void co(char *opcode, stack_t **stack, unsigned int line_number, char *value);
 void free_stack(stack_t *stack);
