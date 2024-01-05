@@ -13,7 +13,7 @@ void _pop(stack_t **stack, unsigned int line_number, char *value)
 	(void)value;
 	stack_t *node;
 
-	if (stack == NULL)
+	if (stack == NULL || *stack == NULL)
 	{
 		dprintf(2, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
