@@ -20,6 +20,7 @@ void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL},
 	};
 
