@@ -28,7 +28,6 @@ void _pall(stack_t **stack, unsigned int line_number, char *value)
 */
 void _push(stack_t **stack, unsigned int line_number, char *value)
 {
-	(void)line_number;
 	stack_t *new_node;
 	int i = 0;
 
