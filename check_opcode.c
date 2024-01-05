@@ -19,6 +19,7 @@ void co(char *opcode, stack_t **stack, unsigned int line_number, char *value)
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
 		{NULL, NULL},
 	};
 
