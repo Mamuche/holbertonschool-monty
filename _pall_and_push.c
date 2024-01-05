@@ -38,6 +38,22 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 		exit(EXIT_FAILURE);
 	}
 
+	while (value[i])
+	{
+		if (value[i] == '-')
+		{
+			i++;
+			continue;
+		}
+		
+		if (value[i] < '0' || value[i] > '9')
+		{
+			dprintf(2, "L%u: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+		i++;
+	}
+
 	new_node = malloc(sizeof(stack_t));
 
 	if (new_node == NULL)
