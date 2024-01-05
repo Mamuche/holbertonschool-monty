@@ -29,7 +29,6 @@ void _pall(stack_t **stack, unsigned int line_number, char *value)
 void _push(stack_t **stack, unsigned int line_number, char *value)
 {
 	(void)line_number;
-
 	stack_t *new_node;
 	int i = 0;
 
@@ -38,7 +37,6 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 		dprintf(2, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
 	while (value[i])
 	{
 		if (value[i] == '-')
@@ -46,7 +44,6 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 			i++;
 			continue;
 		}
-		
 		if (value[i] < '0' || value[i] > '9')
 		{
 			dprintf(2, "L%u: usage: push integer\n", line_number);
@@ -54,24 +51,16 @@ void _push(stack_t **stack, unsigned int line_number, char *value)
 		}
 		i++;
 	}
-
 	new_node = malloc(sizeof(stack_t));
-
 	if (new_node == NULL)
 	{
 		free(new_node);
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	if (atoi(value) == 0)
-	{
-		dprintf(2, "L%u: usage: push integer\n", line_number);
-		exit(EXIT_FAILURE);
-	}
 
 	new_node->prev = NULL;
 	new_node->n = atoi(value);
 	new_node->next = *stack;
-
 	*stack = new_node;
 }
