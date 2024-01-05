@@ -48,7 +48,7 @@ void _nop(stack_t **stack, unsigned int line_number, char *value);
 void _sub(stack_t **stack, unsigned int line_number, char *value);
 void _div(stack_t **stack, unsigned int line_number, char *value);
 void _mul(stack_t **stack, unsigned int line_number, char *value);
-
+void _mod(stack_t **stack, unsigned int line_number, char *value);
 
 void co(char *opcode, stack_t **stack, unsigned int line_number, char *value);
 void free_stack(stack_t *stack);

@@ -35,6 +35,12 @@ int main(int argc, char *argv[])
 			count_line++;
 			continue;
 		}
+		if (strcmp(opcode, "#") == 0)
+		{
+			count_line++;
+			line++;
+			continue;
+		}
 		if (strcmp(opcode, "push") == 0)
 		{
 			value = strtok(NULL, " \t\n");
